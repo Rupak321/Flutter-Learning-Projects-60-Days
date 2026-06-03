@@ -1,5 +1,5 @@
 void main() {
-  // Step 1: Model contacts using Maps with nullable values
+
   Map<String, String?> contact1 = {
     "name": "Alice Smith",
     "phone": "+1-555-0199",
@@ -8,8 +8,8 @@ void main() {
 
   Map<String, String?> contact2 = {
     "name": "Bob Jones",
-    "phone": null, // Missing data
-    "email": null, // Missing data
+    "phone": null, 
+    "email": null, 
   };
 
   print("--- CONTACT CARD 1 ---");
