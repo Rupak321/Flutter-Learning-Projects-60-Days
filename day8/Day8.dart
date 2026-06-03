@@ -1,0 +1,45 @@
+import 'dart:io';
+class bankaccount{
+  double _balance;
+  bankaccount(this._balance);
+  void deposit(double amount) {
+    if (amount > 0) {
+      _balance += amount;
+      print("Deposited: ${amount}");
+    } else {
+      print("Error: Deposit amount must be positive.");
+    }
+  }
+  void withdraw(double withamount){
+    if (withamount > 0) {
+      if (withamount <= _balance) {
+        _balance -= withamount;
+        print("Withdrew: ${withamount}");
+      } else {
+        print("Insficent balance.");
+      }
+    } else {
+      print("PLz entetr positive number.");
+    }
+  }
+}
+void main() {
+  bankaccount a = bankaccount(0.0);
+  print("Enter amount to deposit: ");
+  double amount = double.parse(stdin.readLineSync()!);
+  
+  a.deposit(amount);
+  a.deposit(100.0);
+  
+  a.deposit(-50.0); 
+  print("Current Balance: ${a._balance}");
+   
+   print('Enter amount to withdraw');
+  double withamount = double.parse(stdin.readLineSync()!);
+
+  a.withdraw(withamount);
+  print('CUrrent Balance: ${a._balance}');
+  
+
+
+}
