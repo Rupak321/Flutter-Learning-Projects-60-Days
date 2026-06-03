@@ -1,12 +1,11 @@
 import 'dart:io';
 void main() {
-    String sentence = "Om namah shivaya Namah parvati patayah har har mahadev";
-    String lowercasedSentence = sentence.toLowerCase();
-    List<String> words = lowercasedSentence.split(' ');
-    String longestWord = words.reduce((currentLongest, currentWord) {
-    return currentWord.length > currentLongest.length ? currentWord : currentLongest;
+    String sentence = "Hari Sharanam ram narayan sharma shashtri";
+    List<String> words = sentence.split(' ');
+    String longestWord = words.reduce((currentlongest, currentWord) {
+    return currentWord.length > currentlongest.length ? currentWord : currentlongest;
   });
-int vowelCount = lowercasedSentence
+int vowel = sentence.toLowerCase()
       .split('')
       .where((char) => 'aeiou'.contains(char))
       .length;
@@ -15,6 +14,6 @@ int vowelCount = lowercasedSentence
 
     print("Original Sentence:  $sentence");
     print("Longest Word:       $longestWord");
-    print("Number of Vowels:   $vowelCount");
+    print("Vowel      $vowel");
     print("Reversed Sentence:  $reversedSentence");
 }

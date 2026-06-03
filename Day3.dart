@@ -1,11 +1,11 @@
 import "dart:io";
 void main() {
   print("Enter your exam score:");
-  String? scoreInput = stdin.readLineSync();
-  double score = double.parse(scoreInput!);
+  String? marks = stdin.readLineSync();
+  double score = double.parse(marks!);
    String grade;
    if (score>100 || score < 0) {
-     grade = "Invalid Score plz enter a valid score";
+     grade = "Invvalid score";
    }
    else if(score >= 90) {
      grade = "A";
@@ -18,6 +18,6 @@ void main() {
    } else {
      grade = "F";
    }
-   print("Your score is: $score");
+   print("Your marks is: $score");
    print("Your grade is: $grade");
 }

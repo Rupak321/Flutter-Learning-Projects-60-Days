@@ -1,6 +1,6 @@
 import 'dart:io';
 
-// ---------- Functions ----------
+
 double add(double a, double b) {
   return a + b;
 }
@@ -14,13 +14,10 @@ double multiply(double a, double b) {
 }
 
 String divide(double a, double b) {
-  if (b == 0) {
-    return "Error: Cannot divide by zero";
-  }
   return (a / b).toString();
 }
 
-// ---------- Main Program ----------
+
 void main() {
   int choice = 0;
 
@@ -35,10 +32,10 @@ void main() {
     choice = int.parse(stdin.readLineSync()!);
 
     if (choice >= 1 && choice <= 4) {
-      stdout.write("Enter first number: ");
+      print("Enter first number: ");
       double num1 = double.parse(stdin.readLineSync()!);
 
-      stdout.write("Enter second number: ");
+      print("Enter second number: ");
       double num2 = double.parse(stdin.readLineSync()!);
 
       var result;
@@ -55,9 +52,9 @@ void main() {
 
       print("Result: $result");
     } else if (choice == 5) {
-      print("Exiting program...");
+      print("Exit ");
     } else {
-      print("Invalid choice. Try again.");
+      print("Invalid choicce Try aGain.");
     }
   }
 }
