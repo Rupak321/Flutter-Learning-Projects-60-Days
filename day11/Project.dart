@@ -16,9 +16,9 @@ class Cash extends PaymentMethod {
   Cash(this.amount);
 }
 
-void process(PaymentMethod m) {
+void process(PaymentMethod m) { //takes one input and m is just a variable that can hold any payment type,
   switch (m) {
-    case Card(number: var num):
+    case Card(number: var num)://stores the card number in num variable and prints it
       print("Paid with Card: $num");
 
     case Wallet(app: var appName):
@@ -37,6 +37,6 @@ void main() {
   ];
 
   for (var p in payments) {
-    process(p);
+    process(p);// calls everything step wise step
   }
 }

@@ -1,6 +1,9 @@
 import 'dart:io'; 
 void main() {
 
+
+
+  //creating contact cards using maps
   Map<String, String?> contact1 = {
     "name": "Rupak Pandey",
     "phone": "9849324945",
@@ -13,14 +16,18 @@ void main() {
     "email": null, 
   };
 
-  print("--- CONTACT CARD 1 ---");
+
+  // here contact card is being printed using function generateContactCard which takes a map as input and returns a formatted string
   print(generateContactCard(contact1));
 
-  print("--- CONTACT CARD 2 ---");
   print(generateContactCard(contact2));
 }
 
+
+
+// THis Function Takes a contact map Returns a formatted string to generate contact card 
 String generateContactCard(Map<String, String?> contact) {
+  //using stringbuffer to build the contact card string 
   StringBuffer cardBuffer = StringBuffer();
 
   cardBuffer.writeln("Name:  ${contact['name'] ?? 'Unknown'}");
@@ -29,4 +36,5 @@ String generateContactCard(Map<String, String?> contact) {
   cardBuffer.writeln("Email: ${contact['email'] ?? 'N/A'}");
   
   return cardBuffer.toString();
+  //finally returning the generated contact card as a string
 }

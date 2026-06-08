@@ -1,8 +1,8 @@
 import 'dart:io';
 class bankaccount{
   double _balance;
-  bankaccount(this._balance);
-  void deposit(double amount) {
+  bankaccount(this._balance);//sets the starting balance of account when the object is created
+  void deposit(double amount) {// deposit function
     if (amount > 0) {
       _balance += amount;
       print("Deposited: ${amount}");
@@ -10,7 +10,7 @@ class bankaccount{
       print("Error: Deposit amount must be positive.");
     }
   }
-  void withdraw(double withamount){
+  void withdraw(double withamount){//withdraw function
     if (withamount > 0) {
       if (withamount <= _balance) {
         _balance -= withamount;
@@ -24,7 +24,7 @@ class bankaccount{
   }
 }
 void main() {
-  bankaccount a = bankaccount(0.0);
+  bankaccount a = bankaccount(0); //creates account a with balace 0
   print("Enter amount to deposit: ");
   double amount = double.parse(stdin.readLineSync()!);
   
