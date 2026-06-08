@@ -11,11 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
+          
               body: Builder(
                 
           builder: (context){
             return Center(
           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+
             children: [
               Text("Welcome To Our Page"),
               Text("Hello World"),
