@@ -11,69 +11,77 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Buisness Card")),
-      body: Builder(
-        builder: (context) {
-          return Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                Text("Buisness card"),
-                  Container(
-     
-      width: 370,
-      height: 290,
-      decoration: BoxDecoration(
-        boxShadow: [
-      BoxShadow(
-        color: Colors.black26, // color
-        blurRadius: 10,        // softness
-        spreadRadius: 2,       // size
-        offset: Offset(0, 5),  // position (x, y)
-      ),
-    ],
-        color: Colors.white70,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Stack(
-        children: [
-          Positioned(
-      top: 10,
-      left: 10,
-      child: CircleAvatar(
-        radius: 50,
-        backgroundImage: AssetImage("assets/images/img.jpg"),
-      ),
-    ),
+      appBar: AppBar(title: const Text("Business Card")),
+      body: Center(
+        child: Container(
+          width: 320,
+          padding: const EdgeInsets.all(16),
 
-      Text("Rupak Pandey"),
-    
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black26,
+                blurRadius: 10,
+                offset: Offset(0, 5),
+              ),
+            ],
+          ),
 
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: const [
+              CircleAvatar(
+                radius: 40,
+                backgroundImage: AssetImage("assets/images/img.jpg"),
+              ),
 
+              SizedBox(height: 10),
 
-        ]
-      ),
-    ),
+              Text(
+                "Rupak Pandey",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
-              ],
-            ),
-          );
-        },
+              SizedBox(height: 5),
+
+              Text(
+                "Flutter Developer",
+                style: TextStyle(color: Colors.grey),
+              ),
+
+              SizedBox(height: 10),
+
+              Divider(),
+
+              SizedBox(height: 10),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(Icons.call),
+                  Icon(Icons.email),
+                  Icon(Icons.web),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
