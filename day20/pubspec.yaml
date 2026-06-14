@@ -1,0 +1,32 @@
+name: day20
+description: "A new Flutter project."
+
+publish_to: 'none' # remove this line if you want to publish
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # 📁 Assets (if you add images later)
+  assets:
+
+  fonts:
+    - family: MyFont
+      fonts:
+        - asset: assets/fonts/MyFont-Regular.ttf
