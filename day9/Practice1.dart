@@ -1,4 +1,3 @@
-import 'dart:io';
 class just{
   double x;
   double y;

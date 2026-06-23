@@ -29,7 +29,7 @@ class MyHomePage extends StatelessWidget {
           padding: const EdgeInsets.all(16),
 
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: const Color.fromRGBO(255, 255, 255, 1),
             borderRadius: BorderRadius.circular(12),
             boxShadow: const [
               BoxShadow(
@@ -61,7 +61,7 @@ class MyHomePage extends StatelessWidget {
               SizedBox(height: 5),
 
               Text(
-                "Flutter Developer",
+                "Intern",
                 style: TextStyle(color: Colors.grey),
               ),
 

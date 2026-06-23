@@ -67,10 +67,10 @@ class HomePage extends StatelessWidget {
 
   // Sample quotes
   final List<String> quotes = const [
-    "Stay hungry, stay foolish.",
-    "Code is like humor. When you have to explain it, it’s bad.",
+    "NO onw is perfect so pencil have eraser",
+    "Code is like humor. When you have to explain it, its byad.",
     "Dream big and dare to fail.",
-    "Push yourself, because no one else will.",
+    "Push yourself, till you meet your limitation",
   ];
 
   @override

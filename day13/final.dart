@@ -28,7 +28,7 @@ void main() {
     print("Error: ${e.toString()}");
   }
 
-  on FormatException catch (e) {
+  on FormatException {
     print("Invalid number input!");
   }
 

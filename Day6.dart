@@ -1,4 +1,3 @@
-import 'dart:io';
 void main() {
     String sentence = "Hari Sharanam ram narayan sharma shashtri";
     List<String> words = sentence.split(' ');
